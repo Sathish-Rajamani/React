@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.mainHeader {
+	height: 100px;
+	background-color: #474747;
+	width: 100%;
+}
+.mainFooter {
+	height: 100px;
+	background-color: #474747;
+	width: 100%;
+}
+.col1 {
+	height: 500px;
+	width: 20%;
+	background-color: grey;
+}
+.col2 {
+	height: auto;
+	width: 80%;
+	background-color: black;
+}
+
+.homepage2_body {
+	display: grid;
+	grid-template-columns: 30% auto;
+	grid-template-rows: 60px auto 200px;
+	grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
+header,
+aside,
+main,
+footer {
+	padding: 16px;
+	text-align: center;
+}
+
+header {
+	background: #521751;
+	grid-area: header;
+}
+
+aside {
+	background: #fa923f;
+	grid-area: sidebar;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	background: black;
+	grid-area: footer;
+}
+
+.navigation-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	.navigation-list {
+		flex-direction: column;
+	}
+
+	.homepage2_body {
+		grid-template-rows: 60px auto 270px;
+	}
+}
+
+.navigation-item1 {
+	margin: 0 10px;
+	color: white;
+	flex-basis: 33%;
+}
+
+.navigation-item2 {
+	text-decoration: none;
+	color: white;
+	flex-basis: 66%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.navigation-item a:hover,
+.navigation-item a:active {
+	color: #fa923f;
+}
+.nav-list-ul {
+}
+.nav-list {
+	list-style: none;
 }
