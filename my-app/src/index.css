@@ -83,6 +83,9 @@ footer {
 	.homepage2_body {
 		grid-template-rows: 60px auto 270px;
 	}
+
+	.nav-list-ul {
+	}
 }
 
 .navigation-item1 {
