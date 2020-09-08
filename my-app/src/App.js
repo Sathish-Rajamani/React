@@ -5,6 +5,7 @@ import HomePage from './homePage';
 import HomePage2 from './homePage2';
 import { Navbar, Form, Nav, Button, NavDropdown, FormControl } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import TodoApp from './features/to-do/TodoApp';
 
 function App() {
 	return (
@@ -24,6 +25,9 @@ function App() {
 								<NavDropdown.Item href="">
 									<Link to="/HomePage2">HomePage2</Link>
 								</NavDropdown.Item>
+								<NavDropdown.Item href="">
+									<Link to="/to-do">To-do list using redux</Link>
+								</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
 							</NavDropdown>
@@ -40,6 +44,9 @@ function App() {
 					</Route>
 					<Route path="/HomePage2">
 						<HomePage2 />
+					</Route>
+					<Route path="/to-do">
+						<TodoApp />
 					</Route>
 					<Route path="/">
 						<HomePage />
